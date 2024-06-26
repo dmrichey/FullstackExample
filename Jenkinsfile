@@ -26,7 +26,7 @@ pipeline {
             steps{
                 script{
                     withCredentials([string(credentialsId: 'mydockerhubpassword', variable: 'mydockerhubpassword')]) {
-                        bat 'docker login -u richeydm.dev@gmail.com -p !246ad%Two docker.io'
+                        bat 'docker login -u dmrichey -p !246ad%Two docker.io'
                         
                         bat 'docker push dmrichey/myjenkins'
                     }
